@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 20;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body .e{
+     font-size: 3rem;
+     color: chocolate;
+     text-decoration: underline brown;
+     margin: 0 ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: aliceblue;
+    height: 400px;
+    width: 250px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 20px;
+}
+.container #value{
+    font-size: 1rem;
+}
+.container .inc, .dec, .res{
+    padding: 8px 12px;
+    border-radius: 30px;
+    margin: 0;
+}
+.inc{
+    background-color: rgb(10, 235, 10);
+}
+.dec{
+    background-color: rgb(255, 9, 9);
+}
+.res{
+    background-color: rgb(61, 56, 56);
+}
+
+/* Password button */
+
+.container #t, #e, #p{
+    padding: 10;
+    font-size: 1rem;
+    margin: 0;
+    background-color: rgb(255, 239, 239);
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+}
+input:focus{
+    border: none;
+}
+#togglePassword{
+    position: relative;
+    top: -46px;
+    left: 80px;
+}
+.container #number{
+    font-size: 1rem;
+}
+.container #checkNum{
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: black;
+    background-color: bisque;
+}
+.container #textValue{
+    border: 2px solid black;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    font-size: smaller;
+}
