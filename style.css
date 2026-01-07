@@ -30,12 +30,18 @@ body .e{
     margin: 20px;
 }
 .container #value{
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 10px;
+    border: 2px solid black;
+    box-shadow: rgb(61, 56, 56);
 }
 .container .inc, .dec, .res{
     padding: 8px 12px;
     border-radius: 30px;
     margin: 0;
+    color: white;
+    width: 6.25rem;
 }
 .inc{
     background-color: rgb(10, 235, 10);

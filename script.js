@@ -57,10 +57,13 @@ function checkNumber(){
     var number = document.getElementById('number').value
     var textValue = document.getElementById('textValue')
 
-    if(number <= 1){
+    if(number === 1){
         textValue.innerText='Not a Prime number'
         return;
     }
+    if(number === "") textValue.innerText="Please don't check empty"
+
+    if(number === 0) textValue.innerText=`Number must be greater than ${number}` 
 
     var isPrime = true
 
