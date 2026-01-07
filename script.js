@@ -53,32 +53,48 @@ function togglePassword() {
 // --------------
 
 
-function checkNumber(){
+function checkNumber() {
     var number = document.getElementById('number').value
     var textValue = document.getElementById('textValue')
 
-    if(number === 1){
-        textValue.innerText='Not a Prime number'
-        return;
+    // Empty check
+    if (number === "") {
+        textValue.innerText = "Please don't check empty"
+        textValue.style.color = "red"
+        return
     }
-    if(number === "") textValue.innerText="Please don't check empty"
 
-    if(number === 0) textValue.innerText=`Number must be greater than ${number}` 
+    number = Number(number)
 
-    var isPrime = true
-
-   for(i = 2; i <= Math.sqrt(number); i++){
-    if(number % i === 0){
-        isPrime = false
-        break;
+    // 0 & 1 check
+    if (number === 0 || number === 1) {
+        textValue.innerText = "Number must be greater than 1"
+        textValue.style.color = "red"
+        return
     }
-   }
-   if(isPrime){
-    textValue.innerText= `${number} is Prime number`
-    textValue.style.color='green'
-   }
-   else{
-    textValue.innerText= `${number} is Prime not number`
-    textValue.style.color='red'
-   }
+
+    // Even number check
+    if (number % 2 === 0 && number !== 2) {
+        textValue.innerText = `${number} is Even and Not a Prime number`
+        textValue.style.color = "red"
+        return
+    }
+
+    // Prime check (odd numbers)
+    let isPrime = true
+    for (let i = 3; i <= Math.sqrt(number); i += 2) {
+        if (number % i === 0) {
+            isPrime = false
+            break
+        }
+    }
+
+    // Result
+    if (isPrime) {
+        textValue.innerText = `${number} is Odd and Prime number`
+        textValue.style.color = "green"
+    } else {
+        textValue.innerText = `${number} is Odd and Not a Prime number`
+        textValue.style.color = "red"
+    }
 }

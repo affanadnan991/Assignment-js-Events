@@ -66,15 +66,23 @@ body .e{
     border-radius: 30px;
 }
 input:focus{
-    border: none;
+    outline: none;
 }
 #togglePassword{
     position: relative;
     top: -46px;
     left: 80px;
 }
+
+/* Prime and Odd, Even numbers */
+
 .container #number{
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 10rem;
+}
+.container #number:focus{
+    outline: none;
 }
 .container #checkNum{
     border-radius: 20px;
@@ -84,8 +92,8 @@ input:focus{
 }
 .container #textValue{
     border: 2px solid black;
-    width: 200px;
-    height: 40px;
+    width: 210px;
+    height: 60px;
     padding: 10px;
     font-size: smaller;
 }
